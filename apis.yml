@@ -44,3 +44,6 @@ common:
   - name: GitHub Organization
     url: https://github.com/serpapi
     type: GitHubOrganization
+  - name: Postman Workspace
+    url: https://www.postman.com/serpapi/serpapi/overview
+    type: PostmanWorkspace
