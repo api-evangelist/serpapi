@@ -1,5 +1,6 @@
 aid: serpapi
-url: https://raw.githubusercontent.com/api-search/serpapi/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-search/serpapi/refs/heads/main/apis.yml
 apis:
   - aid: serpapi:serpapi-bing-api
     name: SerpApi Bing API
@@ -21,8 +22,8 @@ apis:
       - url: https://serpapi.com
         type: Documentation
     description: >-
-      SerpApi is a real-time API to access Google search results. We handle
-      proxies, solve captchas, and parse all rich structured data for you.      
+      SerpApi is a real-time API to access Google search results. We handle proxies,
+      solve captchas, and parse all rich structured data for you.
   - aid: serpapi:serpapi-google-local-api
     name: SerpApi Google Local API
     tags:
@@ -32,9 +33,8 @@ apis:
       - url: https://serpapi.com
         type: Documentation
     description: >-
-      SerpApi is a real-time API to access Google search results. We handle
-      proxies, solve captchas, and parse all rich structured data for
-      you.        
+      SerpApi is a real-time API to access Google search results. We handle proxies,
+      solve captchas, and parse all rich structured data for you.
   - aid: serpapi:serpapi-google-maps-api
     name: SerpApi Google Maps API
     tags:
@@ -44,9 +44,8 @@ apis:
       - url: https://serpapi.com
         type: Documentation
     description: >-
-      SerpApi is a real-time API to access Google search results. We handle
-      proxies, solve captchas, and parse all rich structured data for
-      you.        
+      SerpApi is a real-time API to access Google search results. We handle proxies,
+      solve captchas, and parse all rich structured data for you.
   - aid: serpapi:serpapi-google-search-api
     name: SerpApi Google Search API
     tags:
@@ -56,9 +55,8 @@ apis:
       - url: https://serpapi.com
         type: Documentation
     description: >-
-      SerpApi is a real-time API to access Google search results. We handle
-      proxies, solve captchas, and parse all rich structured data for
-      you.       
+      SerpApi is a real-time API to access Google search results. We handle proxies,
+      solve captchas, and parse all rich structured data for you.
   - aid: serpapi:serpapi-google-trends-api
     name: SerpApi Google Trends API
     tags:
@@ -68,9 +66,8 @@ apis:
       - url: https://serpapi.com
         type: Documentation
     description: >-
-      SerpApi is a real-time API to access Google search results. We handle
-      proxies, solve captchas, and parse all rich structured data for
-      you.       
+      SerpApi is a real-time API to access Google search results. We handle proxies,
+      solve captchas, and parse all rich structured data for you.
 name: SerpApi
 tags:
   - Search Engines
@@ -84,15 +81,12 @@ created: '2024-11-07'
 modified: '2026-03-16'
 position: Consuming
 description: >-
-  SerpApi is a powerful API that helps businesses and developers access search
-  engine results in a simple and efficient way. By using SerpApi, users can
-  retrieve data from popular search engines like Google, Bing, Yahoo, and more,
-  without having to worry about web scraping or parsing. This tool streamlines
-  the process of extracting information from search engine pages, making it easy
-  to gather essential data such as search rankings, keyword performance, and
-  more. With its user-friendly interface and robust functionality, SerpApi is an
-  invaluable resource for businesses looking to optimize their SEO strategies
-  and make informed decisions based on real-time search data.
+  SerpApi is a powerful API that helps businesses and developers access search engine
+  results in a simple and efficient way. By using SerpApi, users can retrieve data
+  from popular search engines like Google, Bing, Yahoo, and more, without having to
+  worry about web scraping or parsing. This tool streamlines the process of extracting
+  information from search engine pages, making it easy to gather essential data such
+  as search rankings, keyword performance, and more.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
