@@ -1,0 +1,72 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SerpApi Search API — Account
+  description: 'SerpApi Search API — Account. 1 operations. Lead operation: Retrieve account information. Self-contained Naftiko
+    capability covering one Serpapi business surface.'
+  tags:
+  - Serpapi
+  - Account
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SERPAPI_API_KEY: SERPAPI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: serpapi-account
+    baseUri: https://serpapi.com
+    description: SerpApi Search API — Account business capability. Self-contained, no shared references.
+    resources:
+    - name: account
+      path: /account
+      operations:
+      - name: getaccount
+        method: GET
+        description: Retrieve account information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: api_key
+      value: '{{env.SERPAPI_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: serpapi-account-rest
+    port: 8080
+    description: REST adapter for SerpApi Search API — Account. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/account
+      name: account
+      description: REST surface for account.
+      operations:
+      - method: GET
+        name: getaccount
+        description: Retrieve account information
+        call: serpapi-account.getaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: serpapi-account-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for SerpApi Search API — Account. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: retrieve-account-information
+      description: Retrieve account information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: serpapi-account.getaccount
+      outputParameters:
+      - type: object
+        mapping: $.
