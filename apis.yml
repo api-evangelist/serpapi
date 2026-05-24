@@ -96,3 +96,5 @@ common:
 - name: Agent Skills
   url: https://github.com/serpapi/skills
   type: AgentSkill
+- type: LLMsTxt
+  url: https://serpapi.com/llms.txt
