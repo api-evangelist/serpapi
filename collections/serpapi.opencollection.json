@@ -1,0 +1,143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SerpApi Search API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Run a search across a supported engine",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://serpapi.com/search",
+            "params": [
+              {
+                "name": "engine",
+                "value": "",
+                "type": "query",
+                "description": "Search engine identifier (e.g. google, bing, youtube)."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query (used by most engines except YouTube)."
+              },
+              {
+                "name": "search_query",
+                "value": "",
+                "type": "query",
+                "description": "Search query used by the YouTube engine."
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "SerpApi private key (may also be supplied via the apiKey security scheme)."
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "query",
+                "description": "Geographic origin for the search."
+              },
+              {
+                "name": "gl",
+                "value": "",
+                "type": "query",
+                "description": "Two-letter country code."
+              },
+              {
+                "name": "hl",
+                "value": "",
+                "type": "query",
+                "description": "Two-letter language code."
+              },
+              {
+                "name": "device",
+                "value": "",
+                "type": "query",
+                "description": "Device type to emulate."
+              },
+              {
+                "name": "no_cache",
+                "value": "",
+                "type": "query",
+                "description": "Force fresh (uncached) results."
+              },
+              {
+                "name": "async",
+                "value": "",
+                "type": "query",
+                "description": "Submit asynchronously and retrieve results later."
+              },
+              {
+                "name": "output",
+                "value": "",
+                "type": "query",
+                "description": "Response format."
+              }
+            ]
+          },
+          "docs": "Runs a real-time search against the engine specified by the `engine` query parameter. Supports Google, Bing, YouTube, and many other engines. Engine-specific parameters are documented in the SerpApi engine reference."
+        },
+        {
+          "info": {
+            "name": "Retrieve a previously submitted asynchronous search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://serpapi.com/searches/:search_id",
+            "params": [
+              {
+                "name": "search_id",
+                "value": "",
+                "type": "path",
+                "description": "Identifier of the asynchronous search."
+              }
+            ]
+          },
+          "docs": "Retrieves the JSON results for an asynchronous search by its `search_id`. The `search_id` is returned by /search when `async=true`."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve account information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://serpapi.com/account"
+          },
+          "docs": "Returns information about the SerpApi account associated with the API key."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
