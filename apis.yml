@@ -98,6 +98,6 @@ common:
     type: MCPServer
   - name: Agent Skills
     url: https://github.com/serpapi/skills
-    type: AgentSkill
-  - type: LLMsTxt
+    type: AgentSkills
+  - type: LlmsText
     url: https://serpapi.com/llms.txt
