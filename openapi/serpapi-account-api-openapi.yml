@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: SerpApi Search Account API
+  description: SerpApi is a real-time API to access search engine results. A single /search endpoint accepts an `engine` parameter to target Google, Bing, YouTube, and other supported engines.
+  version: '1.0'
+  x-generated-from: https://serpapi.com
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://serpapi.com
+security:
+- apiKey: []
+tags:
+- name: Account
+paths:
+  /account:
+    get:
+      summary: Retrieve account information
+      description: Returns information about the SerpApi account associated with the API key.
+      operationId: getAccount
+      tags:
+      - Account
+      responses:
+        '200':
+          description: Account information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      additionalProperties: true
+      properties:
+        error:
+          type: string
+    GenericResponse:
+      type: object
+      additionalProperties: true
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key

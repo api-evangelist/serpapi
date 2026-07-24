@@ -1,0 +1,151 @@
+openapi: 3.1.0
+info:
+  title: SerpApi Account Search API
+  description: SerpApi is a real-time API to access search engine results. A single /search endpoint accepts an `engine` parameter to target Google, Bing, YouTube, and other supported engines.
+  version: '1.0'
+  x-generated-from: https://serpapi.com
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://serpapi.com
+security:
+- apiKey: []
+tags:
+- name: Search
+paths:
+  /search:
+    get:
+      summary: Run a search across a supported engine
+      description: Runs a real-time search against the engine specified by the `engine` query parameter. Supports Google, Bing, YouTube, and many other engines. Engine-specific parameters are documented in the SerpApi engine reference.
+      operationId: runSearch
+      tags:
+      - Search
+      parameters:
+      - in: query
+        name: engine
+        required: true
+        schema:
+          type: string
+        description: Search engine identifier (e.g. google, bing, youtube).
+      - in: query
+        name: q
+        required: false
+        schema:
+          type: string
+        description: Search query (used by most engines except YouTube).
+      - in: query
+        name: search_query
+        required: false
+        schema:
+          type: string
+        description: Search query used by the YouTube engine.
+      - in: query
+        name: api_key
+        required: false
+        schema:
+          type: string
+        description: SerpApi private key (may also be supplied via the apiKey security scheme).
+      - in: query
+        name: location
+        required: false
+        schema:
+          type: string
+        description: Geographic origin for the search.
+      - in: query
+        name: gl
+        required: false
+        schema:
+          type: string
+        description: Two-letter country code.
+      - in: query
+        name: hl
+        required: false
+        schema:
+          type: string
+        description: Two-letter language code.
+      - in: query
+        name: device
+        required: false
+        schema:
+          type: string
+          enum:
+          - desktop
+          - tablet
+          - mobile
+        description: Device type to emulate.
+      - in: query
+        name: no_cache
+        required: false
+        schema:
+          type: boolean
+        description: Force fresh (uncached) results.
+      - in: query
+        name: async
+        required: false
+        schema:
+          type: boolean
+        description: Submit asynchronously and retrieve results later.
+      - in: query
+        name: output
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - html
+        description: Response format.
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /searches/{search_id}:
+    get:
+      summary: Retrieve a previously submitted asynchronous search
+      description: Retrieves the JSON results for an asynchronous search by its `search_id`. The `search_id` is returned by /search when `async=true`.
+      operationId: getSearch
+      tags:
+      - Search
+      parameters:
+      - in: path
+        name: search_id
+        required: true
+        schema:
+          type: string
+        description: Identifier of the asynchronous search.
+      responses:
+        '200':
+          description: Search result payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      additionalProperties: true
+      properties:
+        error:
+          type: string
+    GenericResponse:
+      type: object
+      additionalProperties: true
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
