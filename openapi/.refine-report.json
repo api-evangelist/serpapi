@@ -1,0 +1,16 @@
+{
+  "provider": "serpapi",
+  "sources": [
+    "serpapi-account-api-openapi.yml",
+    "serpapi-search-api-openapi.yml"
+  ],
+  "outputs": [
+    "serpapi-account-api-openapi.yml",
+    "serpapi-search-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
