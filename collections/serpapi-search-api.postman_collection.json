@@ -1,0 +1,461 @@
+{
+  "item": [
+    {
+      "id": "504ad19d-eeda-4538-a3a5-633b57a38708",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eee077a0-8ddb-484a-91a4-179784ceac6f",
+          "name": "Run a search across a supported engine",
+          "request": {
+            "name": "Run a search across a supported engine",
+            "description": {
+              "content": "Runs a real-time search against the engine specified by the `engine` query parameter. Supports Google, Bing, YouTube, and many other engines. Engine-specific parameters are documented in the SerpApi engine reference.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "engine",
+                  "value": "<string>",
+                  "description": "(Required) Search engine identifier (e.g. google, bing, youtube)."
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Search query (used by most engines except YouTube)."
+                },
+                {
+                  "disabled": false,
+                  "key": "search_query",
+                  "value": "<string>",
+                  "description": "Search query used by the YouTube engine."
+                },
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "SerpApi private key (may also be supplied via the apiKey security scheme)."
+                },
+                {
+                  "disabled": false,
+                  "key": "location",
+                  "value": "<string>",
+                  "description": "Geographic origin for the search."
+                },
+                {
+                  "disabled": false,
+                  "key": "gl",
+                  "value": "<string>",
+                  "description": "Two-letter country code."
+                },
+                {
+                  "disabled": false,
+                  "key": "hl",
+                  "value": "<string>",
+                  "description": "Two-letter language code."
+                },
+                {
+                  "disabled": false,
+                  "key": "device",
+                  "value": "<string>",
+                  "description": "Device type to emulate."
+                },
+                {
+                  "disabled": false,
+                  "key": "no_cache",
+                  "value": "<boolean>",
+                  "description": "Force fresh (uncached) results."
+                },
+                {
+                  "disabled": false,
+                  "key": "async",
+                  "value": "<boolean>",
+                  "description": "Submit asynchronously and retrieve results later."
+                },
+                {
+                  "disabled": false,
+                  "key": "output",
+                  "value": "<string>",
+                  "description": "Response format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "982bad3b-4c33-455d-ba72-c656e7dce992",
+              "name": "Search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "engine",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "device",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "no_cache",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "async",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "output",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": true,\n  \"key_1\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "57774d3c-aa03-4c18-9673-e140d7f1a41b",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "engine",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "device",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "no_cache",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "async",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "output",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b05c5d8d-6312-44ae-8014-afa0e67edda4",
+          "name": "Retrieve a previously submitted asynchronous search",
+          "request": {
+            "name": "Retrieve a previously submitted asynchronous search",
+            "description": {
+              "content": "Retrieves the JSON results for an asynchronous search by its `search_id`. The `search_id` is returned by /search when `async=true`.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "searches",
+                ":search_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "search_id",
+                  "description": "(Required) Identifier of the asynchronous search."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "acd8c544-e5ad-4428-ad70-e0a02066efa0",
+              "name": "Search result payload",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "searches",
+                    ":search_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "search_id",
+                      "description": "(Required) Identifier of the asynchronous search."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": true,\n  \"key_1\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "02548384-267a-462b-a042-3618ee27326c",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "searches",
+                    ":search_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "search_id",
+                      "description": "(Required) Identifier of the asynchronous search."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://serpapi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b69cf7f2-8908-4307-a6f2-22f3dde22373",
+    "name": "SerpApi Account Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SerpApi is a real-time API to access search engine results. A single /search endpoint accepts an `engine` parameter to target Google, Bing, YouTube, and other supported engines.",
+      "type": "text/plain"
+    }
+  }
+}

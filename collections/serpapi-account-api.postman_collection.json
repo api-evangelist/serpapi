@@ -1,0 +1,164 @@
+{
+  "item": [
+    {
+      "id": "6caff5fc-e9fe-4ebb-818a-040327364f0d",
+      "name": "Account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "55c4a569-3bbe-4a72-be76-14bd386914a1",
+          "name": "Retrieve account information",
+          "request": {
+            "name": "Retrieve account information",
+            "description": {
+              "content": "Returns information about the SerpApi account associated with the API key.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8abbf0d9-3d28-4c66-8b51-ad0087acd3f8",
+              "name": "Account information",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "96ac584b-b0cc-41f0-a98e-1c88f5d17990",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"key_0\": \"string\",\n  \"key_1\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://serpapi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cdc561c5-3680-43e8-8323-7ca4b2e762ab",
+    "name": "SerpApi Search Account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SerpApi is a real-time API to access search engine results. A single /search endpoint accepts an `engine` parameter to target Google, Bing, YouTube, and other supported engines.",
+      "type": "text/plain"
+    }
+  }
+}
