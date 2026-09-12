@@ -120,6 +120,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.23'
 common:
+  - type: Website
+    url: https://www.serpapi.com/
   - type: AgenticAccess
     url: agentic-access/serpapi-agentic-access.yml
   - type: TrustCenter
