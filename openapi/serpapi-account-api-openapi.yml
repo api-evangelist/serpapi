@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: SerpApi Search Account API
   description: SerpApi is a real-time API to access search engine results. A single /search endpoint accepts an `engine` parameter to target Google, Bing, YouTube, and other supported engines.

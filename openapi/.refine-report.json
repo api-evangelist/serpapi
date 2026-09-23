@@ -1,8 +1,7 @@
 {
   "provider": "serpapi",
   "sources": [
-    "serpapi-account-api-openapi.yml",
-    "serpapi-search-api-openapi.yml"
+    "_ae-authored/serpapi-openapi.yml"
   ],
   "outputs": [
     "serpapi-account-api-openapi.yml",
@@ -11,6 +10,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "serpapi-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "serpapi-openapi.yml: declared missing tag: Account",
+    "serpapi-openapi.yml: declared missing tag: Search",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "serpapi-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "serpapi-search-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
