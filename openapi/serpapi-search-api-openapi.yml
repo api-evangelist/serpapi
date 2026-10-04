@@ -135,15 +135,15 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
+    GenericResponse:
+      type: object
+      additionalProperties: true
     Error:
       type: object
       additionalProperties: true
       properties:
         error:
           type: string
-    GenericResponse:
-      type: object
-      additionalProperties: true
   securitySchemes:
     apiKey:
       type: apiKey
