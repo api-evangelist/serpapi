@@ -1,0 +1,139 @@
+{
+  "endpoint": "https://mcp.serpapi.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "SerpApi MCP Server",
+    "version": "2.0.0",
+    "websiteUrl": "https://serpapi.com/integrations/mcp",
+    "icons": [
+      {
+        "src": "https://serpapi.com/android-chrome-512x512.png",
+        "mimeType": "image/png",
+        "sizes": [
+          "512x512"
+        ]
+      }
+    ]
+  },
+  "result": {
+    "tools": [
+      {
+        "_meta": {
+          "ui": {
+            "resourceUri": "ui://prefab/tool/aa90e0ff773b/renderer.html"
+          },
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true,
+          "readOnlyHint": true,
+          "title": "SerpApi search (dashboard)"
+        },
+        "description": "Interactive dashboard variant of `search`: returns summary metrics, a source breakdown chart, and a results table with a click-to-expand detail panel, all rendered in the conversation. Same params as `search`. Use for a richer visual overview of a query's results. Automatically selects an engine-specific dashboard when available (e.g. google_flights gets price intelligence charting).",
+        "inputSchema": {
+          "properties": {
+            "params": {
+              "additionalProperties": true,
+              "default": null,
+              "type": "object"
+            }
+          },
+          "type": "object",
+          "additionalProperties": false
+        },
+        "name": "search_dashboard",
+        "title": "SerpApi search (dashboard)"
+      },
+      {
+        "_meta": {
+          "ui": {
+            "resourceUri": "ui://prefab/tool/583d325b0e9c/renderer.html"
+          },
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true,
+          "readOnlyHint": true,
+          "title": "SerpApi search (table)"
+        },
+        "description": "Interactive UI variant of `search`: returns organic results as a sortable, searchable table rendered in the conversation. Same params as `search`. Use when the host supports MCP Apps and the user wants to browse results visually rather than read JSON.",
+        "inputSchema": {
+          "properties": {
+            "params": {
+              "additionalProperties": true,
+              "default": null,
+              "type": "object"
+            }
+          },
+          "type": "object",
+          "additionalProperties": false
+        },
+        "name": "search_table",
+        "title": "SerpApi search (table)"
+      },
+      {
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true,
+          "readOnlyHint": true,
+          "title": "SerpApi search"
+        },
+        "description": "Universal search tool supporting all SerpApi engines and result types.\n\n    When to use:\n        - Any query needing live, structured SERP data: web results, news, product listings, job postings, local businesses, flight/hotel prices, video results, images, stock/weather cards, knowledge graph entities.\n    \n    Engine discovery via MCP resources:\n        - serpapi://engines lists all engines supported by this tool.\n        - serpapi://engines/<engine> provides engine-specific parameters and supported options.\n        - Example: serpapi://engines/google_news\n\n    Input schema:\n        params: JSON object containing SerpApi engine parameters.\n            Common parameters:\n                - q: Search query. Required for most engines.\n                - engine: SerpApi engine name. Defaults to \"google_light\".\n                - location: Optional geographic location for localized results.\n                - output: Optional response format. Omit for JSON (default), or set to \"md\" for Markdown.\n    \n            Engine-specific parameters are available via MCP resources:\n                - serpapi://engines lists all supported engines.\n                - serpapi://engines/<engine> provides parameters and options for one engine.\n    \n        mode: Response mode. Defaults to \"complete\".\n            - \"complete\": Return the full SerpApi response.\n            - \"compact\": Remove metadata fields from JSON responses. Markdown is returned unchanged.\n    \n    Output schema:\n        structuredContent.result contains the response string: serialized JSON or unchanged Markdown.\n        The same string is included in text content. Tool failures preserve this wrapper and set isError to true.\n\n    Guided search:\n        Searches can request missing engine parameters from supporting clients using the engine catalog and engine-specific rules.\n        Flights collect airports and dates, hotels collect the destination and stay dates, and directions collect missing endpoints.\n        Other clients receive a missing-parameter error. Cancellation does not run a search.\n\n    Examples:\n        Weather: {\"params\": {\"q\": \"weather in London\", \"engine\": \"google\"}, \"mode\": \"complete\"}\n        Stock: {\"params\": {\"q\": \"AAPL stock\", \"engine\": \"google\"}, \"mode\": \"complete\"}\n        General: {\"params\": {\"q\": \"coffee shops\", \"engine\": \"google_light\", \"location\": \"Austin, TX\"}, \"mode\": \"complete\"}\n        Compact: {\"params\": {\"q\": \"news\"}, \"mode\": \"compact\"}\n        Markdown: {\"params\": {\"q\": \"news\", \"output\": \"md\"}}\n\n    Supported engines include (not limited to):\n        - google\n        - google_light\n        - google_flights\n        - google_hotels\n        - google_images\n        - google_news\n        - google_local\n        - google_shopping\n        - google_jobs\n        - bing\n        - yahoo\n        - duckduckgo\n        - youtube_search\n        - baidu\n        - ebay\n    ",
+        "inputSchema": {
+          "properties": {
+            "params": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Dictionary of SerpApi engine-specific parameters. Common parameters include:\n- q: Search query (required for most engines)\n- engine: Search engine to use (default: \"google_light\")\n- location: Geographic location filter\n- output: Response format; omit for JSON or set to \"md\" for Markdown"
+            },
+            "mode": {
+              "default": "complete",
+              "type": "string",
+              "description": "Response mode (default: \"complete\")\n- \"complete\": Returns the full response\n- \"compact\": Removes metadata fields from JSON responses; Markdown is unchanged"
+            }
+          },
+          "type": "object",
+          "additionalProperties": false
+        },
+        "name": "search",
+        "outputSchema": {
+          "properties": {
+            "result": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result"
+          ],
+          "type": "object",
+          "x-fastmcp-wrap-result": true
+        },
+        "title": "SerpApi search"
+      }
+    ]
+  }
+}
