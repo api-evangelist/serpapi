@@ -1,4 +1,4 @@
-# SerpApi (serpapi)
+# SerpApi
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,110 +66,140 @@
 
 SerpApi is a powerful API that helps businesses and developers access search engine results in a simple and efficient way. By using SerpApi, users can retrieve data from popular search engines like Google, Bing, Yahoo, and more, without having to worry about web scraping or parsing. This tool streamlines the process of extracting information from search engine pages, making it easy to gather essential data such as search rankings, keyword performance, and more.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-search/serpapi/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-search/serpapi/refs/heads/main/apis.yml)
+**Areas:** Bing · Google · Search · Search Engines
 
-## Scope
+## SerpApi on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for SerpApi is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/serpapi/](https://apis.io/providers/serpapi/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Bing
-- Google
-- Search
-- Search Engines
+- [SerpApi Google Jobs API](https://apis.io/apis/serpapi/serpapi-google-jobs-api/) — SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [SerpApi Google Local API](https://apis.io/apis/serpapi/serpapi-google-local-api/) — SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [SerpApi Google Maps API](https://apis.io/apis/serpapi/serpapi-google-maps-api/) — SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [SerpApi Google Search API](https://apis.io/apis/serpapi/serpapi-google-search-api/) — SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [SerpApi Google Trends API](https://apis.io/apis/serpapi/serpapi-google-trends-api/) — SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [SerpApi Account API](https://apis.io/apis/serpapi/serpapi-account-api/) — The Account API from SerpApi — 1 operation(s) for account.
+- [SerpApi Search API](https://apis.io/apis/serpapi/serpapi-search-api/) — The Search API from SerpApi — 2 operation(s) for search.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-07
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (2)
 
-### SerpApi Bing API
+Model Context Protocol servers that expose the API to agents.
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [MCP Server](https://apis.io/servers/serpapi/mcp-server/)
+- [Moved to /providers/serpapi/](https://apis.io/servers/serpapi/serpapi/)
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+#### Agent skills (2)
 
-#### Properties
+Agent skills built on the API.
 
-- [Documentation](https://serpapi.com)
-- [OpenAPI](openapi/serpapi-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [serpapi-web-search](https://apis.io/agent-skills/serpapi/serpapi-web-search/)
+- [serpapi-web-search](https://apis.io/agent-skills/serpapi/serpapi-web-search-2/)
 
-### SerpApi Google Jobs API
+#### Agentic access (1)
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+- [Serpapi Agentic Access](https://apis.io/agentic-access/serpapi/serpapi-agentic-access/)
 
-#### Properties
+#### Collections (3)
 
-- [Documentation](https://serpapi.com)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### SerpApi Google Local API
+- [SerpApi Search API](https://apis.io/collections/serpapi/open-serpapi/)
+- [SerpApi Search Account API](https://apis.io/collections/serpapi/open-serpapi-account-api/)
+- [SerpApi Account Search API](https://apis.io/collections/serpapi/open-serpapi-search-api/)
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+#### Security (4)
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Serpapi Authentication](https://apis.io/security/serpapi/serpapi-authentication/)
+- [Serpapi Domain Security](https://apis.io/security/serpapi/serpapi-domain-security/)
+- [Serpapi Trust Center](https://apis.io/security/serpapi/serpapi-trust-center/)
+- [Serpapi Vulnerability Disclosure](https://apis.io/security/serpapi/serpapi-vulnerability-disclosure/)
 
-- [Documentation](https://serpapi.com)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### SerpApi Google Maps API
+Published plans, tiers and prices.
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+- [Serpapi Plans Pricing](https://apis.io/plans/serpapi/serpapi-plans-pricing/)
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://serpapi.com)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Serpapi Rate Limits](https://apis.io/rate-limits/serpapi/serpapi-rate-limits/)
 
-### SerpApi Google Search API
+#### FinOps (1)
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+- [Serpapi Finops](https://apis.io/finops/serpapi/serpapi-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://serpapi.com)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### SerpApi Google Trends API
+- [Website](https://www.serpapi.com/)
+- [Blog](https://serpapi.com/blog/feed)
+- [GitHub](https://github.com/serpapi)
 
-SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.
+## API Evangelist rating
 
-- **Human URL:** [https://serpapi.com](https://serpapi.com)
+**Kin Score 31.9** — thin · rubric 0.25.0 · scored 2026-10-23
 
-#### Properties
+| Facet | Score |
+|---|---|
+| Discoverability | 63.3 |
+| Contract quality | 44.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 35.0 |
+| Access clarity | 15.8 |
 
-- [Documentation](https://serpapi.com)
-- [Postman Collection](collections/serpapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/serpapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+**Agent readiness 36.1** — agent-ready
 
-## Common Properties
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-- [LinkedIn](https://www.linkedin.com/company/serpapi)
-- [GitHub Organization](https://github.com/serpapi)
-- [Postman Workspace](https://www.postman.com/serpapi/serpapi/overview)
-- [M C P Server](https://github.com/serpapi/serpapi-mcp)
-- [Agent Skill](https://github.com/serpapi/skills)
-- [L L Ms Txt](https://serpapi.com/llms.txt)
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/serpapi/](https://apis.io/providers/serpapi/).
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SerpApi: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/serpapi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
